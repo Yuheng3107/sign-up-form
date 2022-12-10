@@ -200,7 +200,7 @@ label {
     font-weight: 500;
 }
 
-input.error:empty {
+input.error:invalid {
     border: 2px solid red;
 }
 
@@ -236,4 +236,24 @@ input:focus {
 div.credit {
     padding: 5px;
     font-size: 1.2vmax;
+}
+
+.sign-in {
+    text-decoration: none;
+    
+    color:rgb(49, 118, 76);
+}
+
+.login {
+    font-family: OpenSans;
+}
+
+button#create-account:hover {
+    background-color:rgb(40, 91, 60);
+}
+
+#warning {
+    color: red;
+    font-size: 0.8rem;
+
 }

@@ -7,6 +7,7 @@
     <title>Sign Up Form</title>
     <link rel="stylesheet" href="styles.css">
     <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <script type="text/javascript" src="script.js" defer></script>
 </head>
 <body>
     <div id="page">
@@ -54,18 +55,19 @@
                     <div class="passwords">
                         <div class="password">
                             <label for="password">PASSWORD</label>
-                            <input class="error" type="password" id="password" name="password">
+                            <input minlength="3" class="error" type="password" id="password" name="password">
                         </div>
                         <div class="confirm-password">
                             <label for="confirm-password">CONFIRM PASSWORD</label>
-                            <input class="error" type="password" name="confirm-password" id="confirm-password">
+                            <input minlength="3" class="error" type="password" name="confirm-password" id="confirm-password">
                         </div>
                     </div>
+                    <p id="warning"></p>
                 </div>     
             </div>
-            <button id="create-account" type="submit">Create Account</button>
+            <button id="create-account" type="button">Create Account</button>
         </form>
-            <p class="login">Already have an account? <a href="">Sign in</a></p>
+            <p class="login">Already have an account? <a class="sign-in" href="">Sign in</a></p>
                 
                 
             
