@@ -75,6 +75,8 @@ div.background-image {
     width: 30%;
     background-image: url(background-image.jpeg);
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 100%;
 
     display: flex;
@@ -155,14 +157,18 @@ div.form-controls {
     display: flex;
     flex-direction: column;
     flex: 1;
+    background-color: var(--form-color);
     
 }
 
 div.name, div.contact, div.passwords {
     display: flex;
     flex: 1;
+
     
 }
+
+
 
 div.first-name, div.last-name, div.phone-no, div.email, div.password, div.confirm-password {
     display: flex;
@@ -214,6 +220,7 @@ input:focus {
         --sans-font-size: 1.3rem;
     }
 
+    
     input {
         margin-right: 2vw;
         
@@ -222,9 +229,7 @@ input:focus {
     div.background-image {
         width: 35vw;
     }
-    input#password {
-         margin-top: 15px;
-    }
+    
 
     div.logo img {
         height: 12vh;
