@@ -155,18 +155,12 @@ form > p {
 
 div.form-controls {
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
     flex: 1;
     background-color: var(--form-color);
     
 }
 
-div.name, div.contact, div.passwords {
-    display: flex;
-    flex: 1;
-
-    
-}
 
 
 
