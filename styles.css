@@ -3,15 +3,21 @@
     src: url(Norse-Bold.otf);
 }
 
-
+@font-face {
+    font-family: OpenSans;
+    src: url(Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
+    font-weight: 700;
+}
 *, *::after, *::before {
     box-sizing: border-box;
+    
 }
 
 * {
     margin: 0;
     padding: 0;
     font: inherit
+    
 }
 
 input, textarea, button, select {
@@ -20,10 +26,17 @@ input, textarea, button, select {
 
 :root {
     --logo-height: 15vh;
-    --logo-top: 20vh;
+    --logo-top: 25vh;
     --form-height: 35vh;
     --form-color: white;
     --page-color: whitesmoke;
+    --middle-margin: 3rem;
+    --sans-font-size: 1.5rem;
+    --input-width: 25vmin;
+    --input-height: 0px;
+    --input-height-padding: 0.1vh;
+    --input-margin: 3vh;
+    font-family: Arial, Helvetica, sans-serif;
 }
 div#page {
     display: flex;
@@ -31,6 +44,7 @@ div#page {
     height: 100vh;
     width: 100vw;
     background-color: var(--page-color);
+    overflow: scroll;
 }
 
 div.logo {
@@ -47,29 +61,37 @@ div.logo {
     background-color: rgba(0,0,0,0.5);
 
     height: var(--logo-height);
+    width: 100%;
 }
 
 div.logo img {
-    height: 100%;
+    height: 18vh;
     padding: 1rem;
+    
 }
 
-div.background-image  {
+div.background-image {
     color: white;
     width: 30%;
-    background-image: url(background-image-2.jpeg);
+    background-image: url(background-image.jpeg);
     background-size: cover;
     height: 100%;
 
     display: flex;
+    flex-shrink: 1;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     position: relative;
+
+    font-size: 1rem;
+    
+    margin-right: var(--middle-margin);
 
 }
 
 div.header {
-    width: 70%;
+    width: 70vw;    
 
 }
 
@@ -78,7 +100,10 @@ div.logo p {
 }
 
 div.header header {
+    display: flex;
     height: calc(var(--logo-height) + var(--logo-top));
+    
+    
 }
 
 div.form {
@@ -87,9 +112,128 @@ div.form {
     background-color: var(--form-color);
     display: flex;
 
+    margin-left: calc(-1 * var(--middle-margin));
+    padding-left: var(--middle-margin);
+
+
     
 }
 
-a {
-    text-decoration: none;
+
+
+div.credit a {
+    color: white;
+}
+
+header {
+    font-size: var(--sans-font-size);
+    font-family: OpenSans;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-right: 5rem;
+    padding: 2rem 0;
+    flex: 1 1 100%;
+    
+
+}
+
+em {
+    font-style: italic;
+    
+}
+
+form > p {
+    font-family: OpenSans;
+    font-size: var(--sans-font-size);
+    padding: 1rem 0;
+    flex-shrink: 1;
+    margin-bottom: -2vh;
+}
+
+div.form-controls {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    
+}
+
+div.name, div.contact, div.passwords {
+    display: flex;
+    flex: 1;
+    
+}
+
+div.first-name, div.last-name, div.phone-no, div.email, div.password, div.confirm-password {
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--input-margin);
+    flex: 1;
+   
+}
+
+input {
+    
+    margin-right: 10rem;
+    
+    width: var(--input-width);
+    border-radius: 5px;
+    padding: var(--input-height-padding);
+    flex: 1;
+}
+
+#create-account {
+    margin: 2rem 0;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    background-color: rgb(14, 63, 33);
+    font-family: OpenSans;
+    font-weight: 500;
+}
+
+label {
+    font-size: 1rem;
+    font-family: monospace;
+    color: rgb(32, 30, 30);
+    font-weight: 500;
+}
+
+input.error:empty {
+    border: 2px solid red;
+}
+
+input:focus {
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    
+}
+@media screen and (max-width: 800px) {
+    :root {
+        font-size: 1.5vmax;
+        --sans-font-size: 1.3rem;
+    }
+
+    input {
+        margin-right: 2vw;
+        
+    }
+
+    div.background-image {
+        width: 35vw;
+    }
+    input#password {
+         margin-top: 15px;
+    }
+
+    div.logo img {
+        height: 12vh;
+        
+    }
+
+}
+
+div.credit {
+    padding: 5px;
+    font-size: 1.2vmax;
 }
